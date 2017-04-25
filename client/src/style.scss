@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.headerTop {
+  margin: 25px 0;
+
+  h1 {
+    font-weight: bold;
+    color: #464547;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+h2,
+h3 {
+  font-size: 18px;
+}
+
+label {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.main {
+  padding: 0 10px;
+
+  .date {
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    display: inline-block;
+
+    .normalWeight {
+      margin-right: 10px;
+    }
+
+    i.medium {
+      font-size: 24px;
+      margin-right: 0;
+      vertical-align: bottom;
+      margin-right: 10px;
+    }
+  }
+
+  .filterLine {
+    padding: 0 12px;
+  }
+}
+
+.containerContent {
+  margin-left: 300px;
+
+  a:not(.btn) {
+    color: #39c2d7;
+    text-decoration: none;
+    font-weight: normal;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    color: #39c2d7;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  .normalWeight {
+    font-weight: 400;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-left: 0;
+  }
+}
+
+.userViewBox {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+
+  .userLogo {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.side-nav {
+  background: #464547;
+
+  &.mainSideNav {
+    transform: translateX(0px);
+  }
+
+  .userView {
+    padding: 20px;
+    margin: 0;
+
+    .background {
+      background-image: url('../images/office.jpg');
+      background-size: cover;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  .collapsible {
+    a {
+      padding: 0 32px;
+    }
+
+    .collapsible-body a {
+      color: #464547;
+    }
+  }
+
+  li > a {
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      color: #39c2d7;
+
+      &> i.material-icons {
+        color: #39c2d7;
+      }
+    }
+
+    &> i.material-icons {
+      color: #fff;
+    }
+  }
+
+  &.mobView {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.mobMenuBlc {
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+
+    nav.mobMenu {
+      background: #464547;
+
+      .nav-wrapper {
+        padding: 0 12px;
+      }
+
+      .userViewBox {
+        max-height: 55px;
+        max-width: 55px;
+        vertical-align: middle;
+
+        @media screen and (max-width: 400px) {
+          max-height: 50px;
+          max-width: 50px;
+        }
+      }
+    }
+  }
+}
+
+.lectureLine {
+  p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 0;
+  }
+
+  .normalWeight {
+    display: inline-block;
+  }
+}
+
+.collapsible {
+  h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .lecturelinks a {
+    padding: 0 10px;
+  }
+
+  .row {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .describeLecture {
+    margin-bottom: 10px;
+  }
+
+  .collapsible-body {
+    background-color: #fff;
+  }
+}
+
+.tabPanel {
+  .tabContent {
+    padding: 32px 0 16px;
+  }
+
+  .tabs {
+    .indicator {
+      background-color: #39c2d7;
+    }
+
+    .tab {
+      a {
+        color: #464547;
+
+        &:hover {
+          color: #39c2d7;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+[type="checkbox"]:checked + label:before {
+  border-right: 2px solid #39c2d7;
+  border-bottom: 2px solid #39c2d7;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: #39c2d7;
+  border-color: #39c2d7;
+}
+
+.circleBtnBlc {
+  position: relative;
+
+  .circleBtn {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+}
+
+.modal {
+  .modal-content {
+    padding: 24px 24px 0;
+  }
+
+  .modal-footer {
+    padding: 0 35px;
+    display: block;
+
+    .btn-flat {
+      float: none;
+      display: inline-block;
+
+      &.btn {
+        float: right;
+        color: #fff;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      a,
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &.modalForm {
+    top: 0 !important;
+    max-height: 100%;
+    padding-bottom: 20px;
+  }
+}
+
+.centerDiv .col {
+  float: none;
+  margin: 0 auto;
+}
+
+.activeLabel {
+  label {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-140%);
+    transform: translateY(-140%);
+  }
+}
+
+.blueBtn {
+  background: #39c2d7;
+  color: #fff;
+
+  &:hover {
+    background-color: darken(#39c2d7, 10%);
+  }
+
+  i {
+    color: #fff;
+  }
+}
+
+.radioLine {
+  padding: 16px 0 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  #sidenav-overlay {
+    z-index: 996;
+  }
+}
